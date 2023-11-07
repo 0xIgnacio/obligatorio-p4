@@ -1,0 +1,3 @@
+/Users/ignacioperciante/Developer/C_C++/obligatorio-p4/cmake-build-debug/CMakeFiles/obligatorio-p4.dir
+/Users/ignacioperciante/Developer/C_C++/obligatorio-p4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ignacioperciante/Developer/C_C++/obligatorio-p4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

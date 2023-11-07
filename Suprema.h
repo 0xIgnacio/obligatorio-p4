@@ -10,13 +10,13 @@ using namespace std;
 class Suprema: public Bruja {
 	private:
 		// Atributes
-		Fecha fechaNasc;
+		Fecha fechaNac;
 		int cantPoderes;
 
 	public:
 		// Constructor / Destructor
 		Suprema();
-		Suprema(Fecha, int);
+		Suprema(Fecha, int, int, string);
 		~Suprema();
 
 		// Getter / Setter

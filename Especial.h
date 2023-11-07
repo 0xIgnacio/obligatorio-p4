@@ -7,12 +7,12 @@ class Especial: public Hechizo {
 	private:
 		// Atributes
 		int anoManifesto;
-		string texto;
+		string descripcion;
 
 	public:
-		// Constructo / Destructor
+		// Constructor / Destructor
 		Especial();
-		Especial(int, string);
+		Especial(int, string, int, string);
 		~Especial();
 
 		// Getter / Setter

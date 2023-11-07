@@ -15,4 +15,8 @@ add_executable(obligatorio-p4 main.cpp
         Especial.cpp
         Especial.h
         Fecha.cpp
-        Fecha.h)
+        Fecha.h
+        DiccioBrujas.cpp
+        DiccioBrujas.h
+        SecHechizo.cpp
+        SecHechizo.h)

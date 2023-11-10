@@ -20,6 +20,8 @@ class Suprema: public Bruja {
 		~Suprema();
 
 		// Getter / Setter
+		Fecha getFechaNac();
+		int getCantPoderes();
 
 		// Methods
 };

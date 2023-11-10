@@ -17,6 +17,8 @@ class Hechizo {
 		~Hechizo();
 
 		// Getter / Setter
+		int getNumero();
+		string getTexto();
 
 		// Methods
 };

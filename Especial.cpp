@@ -13,5 +13,12 @@ Especial::Especial(int anoManifesto, string descripcion, int numero, string text
 Especial::~Especial() {}
 
 // Getter / Setter
+int Especial::getAnoManifesto() {
+	return this->anoManifesto;
+}
+
+string Especial::getDescripcion() {
+	return this->descripcion;
+}
 
 // Methods

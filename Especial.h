@@ -16,6 +16,8 @@ class Especial: public Hechizo {
 		~Especial();
 
 		// Getter / Setter
+		int getAnoManifesto();
+		string getDescripcion();
 
 		// Methods
 };

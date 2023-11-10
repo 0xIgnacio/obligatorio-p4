@@ -13,5 +13,12 @@ Comun::Comun(string regionOrigen, bool vuelaEscoba, int identificador, string no
 Comun::~Comun() {}
 
 // Getter / Setter
+string Comun::getRegionOrigen() {
+	return this->regionOrigen;
+}
+
+bool Comun::getVuelaEscoba() {
+	return this->vuelaEscoba;
+}
 
 // Methods

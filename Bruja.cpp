@@ -13,5 +13,16 @@ Bruja::Bruja(int identificador, string nombre):nombre(nombre), hechizos() {
 Bruja::~Bruja() {}
 
 // Getter / Setter
+int Bruja::getIdentificador() {
+	return this->identificador;
+}
+
+string Bruja::getNombre() {
+	return this->nombre;
+}
+
+SecHechizo* Bruja::getSecHechizo() {
+	return &this->hechizos;
+}
 
 // Methods

@@ -8,7 +8,7 @@ const int MAX_H = 20;
 class SecHechizo {
 	private:
 		// Atributes
-		Hechizo* hechizos[MAX_H];
+		Hechizo * hechizos[MAX_H];
 		int tope;
 
 	public:
@@ -17,6 +17,8 @@ class SecHechizo {
 		~SecHechizo();
 
 		// Primitivas
+		void insert(Hechizo *);											// Precondicion: no esta lleno
+		bool estaLleno();
 
 		// Methods
 };

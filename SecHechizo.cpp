@@ -12,5 +12,13 @@ SecHechizo::~SecHechizo() {
 }
 
 // Primitivas
+void SecHechizo::insert(Hechizo * nuevo) {
+	this->hechizos[this->tope] = nuevo;
+	this->tope++;
+}
+
+bool SecHechizo::estaLleno() {
+	return this->tope == MAX_H;
+}
 
 // Methods

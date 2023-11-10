@@ -19,6 +19,9 @@ class Bruja {
 		~Bruja();
 
 		// Getter / Setter
+		int getIdentificador();
+		string getNombre();
+		SecHechizo * getSecHechizo();
 
 		// Methods
 };

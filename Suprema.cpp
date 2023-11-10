@@ -13,5 +13,12 @@ Suprema::Suprema(Fecha fechaNac, int cantPoderes, int identificador, string nomb
 Suprema::~Suprema() {}
 
 // Getter / Setter
+Fecha Suprema::getFechaNac() {
+	return this->fechaNac;
+}
+
+int Suprema::getCantPoderes() {
+	return this->cantPoderes;
+}
 
 // Methods

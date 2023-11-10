@@ -13,5 +13,12 @@ Hechizo::Hechizo(int numero, string texto): texto() {
 Hechizo::~Hechizo() {}
 
 // Getter / Setter
+int Hechizo::getNumero() {
+	return this->numero;
+}
+
+string Hechizo::getTexto() {
+	return this->texto;
+}
 
 // Methods

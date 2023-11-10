@@ -7,25 +7,29 @@ class DiccioBrujas {
 	private:
 		// Atributes
 		struct node {
-			Bruja* info;
-			node* izq;
-			node* der;
+			Bruja * info;
+			node * izq;
+			node * der;
 		};
-		node* arbol;
+		node * arbol;
+
+		// Methods
+		void BorrarArbol(node *);
+		bool memberAux(node *, int);
+		void insertAux(node *, node *, int);
+		Bruja* findAux(node *, int);
 
 	public:
 		// Constructor / Destructor
 		DiccioBrujas();
-		void BorrarArbol(node*);
 		~DiccioBrujas();
 
 		// Primitivas
 		bool member(int);
-		void insert(Bruja);
-		Bruja find(int);
+		void insert(Bruja *);
+		Bruja* find(int);
 
 		// Methods
 };
-
 
 #endif //OBLIGATORIO_P4_DICCIOBRUJAS_H

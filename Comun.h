@@ -2,12 +2,14 @@
 #define OBLIGATORIOP4_COMUN_H
 
 #include "Bruja.h"
+#include "Suprema.h"
 
 class Comun: public Bruja {
 	private:
 		// Atributes
 		string regionOrigen;
 		bool vuelaEscoba;
+		Suprema * super;
 
 	public:
 		// Constructor / Destructor
@@ -16,6 +18,8 @@ class Comun: public Bruja {
 		~Comun();
 
 		// Getter / Setter
+		string getRegionOrigen();
+		bool getVuelaEscoba();
 
 		// Methods
 };

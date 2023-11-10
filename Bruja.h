@@ -16,7 +16,7 @@ class Bruja {
 		// Constructor / Destructor
 		Bruja();
 		Bruja(int, string);
-		~Bruja();
+		virtual ~Bruja();
 
 		// Getter / Setter
 		int getIdentificador();

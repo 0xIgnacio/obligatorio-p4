@@ -62,10 +62,13 @@ void DiccioBrujas::insert(Bruja * nueva) {
 	nuevo->info = nueva;
 	nuevo->izq = nullptr;
 	nuevo->der = nullptr;
-	insertAux(this->arbol, nuevo, nuevo->info->getIdentificador());
+	if (this->arbol == nullptr)
+		this->arbol = nuevo;
+	else
+		insertAux(this->arbol, nuevo, nuevo->info->getIdentificador());
 }
 
-Bruja* DiccioBrujas::find(int num) {
+Bruja * DiccioBrujas::find(int num) {
 	return findAux(this->arbol, num);
 }
 

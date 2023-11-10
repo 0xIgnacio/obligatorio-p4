@@ -17,7 +17,7 @@ class DiccioBrujas {
 		void BorrarArbol(node *);
 		bool memberAux(node *, int);
 		void insertAux(node *, node *, int);
-		Bruja* findAux(node *, int);
+		Bruja * findAux(node *, int);
 
 	public:
 		// Constructor / Destructor
@@ -27,7 +27,7 @@ class DiccioBrujas {
 		// Primitivas
 		bool member(int);
 		void insert(Bruja *);
-		Bruja* find(int);
+		Bruja * find(int);
 
 		// Methods
 };

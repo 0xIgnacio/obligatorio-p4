@@ -22,8 +22,15 @@ class Bruja {
 		int getIdentificador();
 		string getNombre();
 		SecHechizo * getSecHechizo();
+		int cantHechizosComunes();
+		int cantHechizosEspeciales();
+		virtual string getTipo() = 0;
+		virtual int getPuntosPoder() = 0;
 
 		// Methods
+		void agregarHechizo(Hechizo *);
+		void toStringSimple();
+		virtual void toStringDetallado();
 };
 
 #endif //OBLIGATORIOP4_BRUJA_H

@@ -18,6 +18,7 @@ class Especial: public Hechizo {
 		// Getter / Setter
 		int getAnoManifesto();
 		string getDescripcion();
+		string getTipo() override;
 
 		// Methods
 };

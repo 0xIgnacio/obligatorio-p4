@@ -1,4 +1,5 @@
 #include "Hechizo.h"
+#include <iostream>
 
 // PUBLIC
 // Constructor / Destructor
@@ -21,4 +22,11 @@ string Hechizo::getTexto() {
 	return this->texto;
 }
 
+string Hechizo::getTipo() {
+	return "Comun";
+}
+
 // Methods
+void Hechizo::toString() {
+	std::cout << this->getNumero() << ". " << this->getTexto();
+}

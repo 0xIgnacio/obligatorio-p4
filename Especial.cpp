@@ -21,4 +21,8 @@ string Especial::getDescripcion() {
 	return this->descripcion;
 }
 
+string Especial::getTipo() {
+	return "Especial";
+}
+
 // Methods

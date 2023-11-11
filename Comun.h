@@ -20,8 +20,12 @@ class Comun: public Bruja {
 		// Getter / Setter
 		string getRegionOrigen();
 		bool getVuelaEscoba();
+		string getTipo() override;
+		int getPuntosPoder() override;
+		void setSuprema(Suprema *);
 
 		// Methods
+		void toStringDetallado() override;
 };
 
 #endif //OBLIGATORIOP4_COMUN_H

@@ -1,5 +1,5 @@
-#ifndef OBLIGATORIOP4_FECHA_H
-#define OBLIGATORIOP4_FECHA_H
+#ifndef ARTICULO_FECHA_H
+#define ARTICULO_FECHA_H
 
 class Fecha {
 	private:
@@ -9,14 +9,19 @@ class Fecha {
 		int ano;
 
 	public:
-		// Cosntructor / Destructor
+		// Constructor
 		Fecha();
 		Fecha(int, int, int);
 		~Fecha();
 
 		// Getter / Setter
+		int getAno();
+
+		// Operator
+		bool operator<(Fecha);
 
 		// Methods
+		void toString();
 };
 
-#endif //OBLIGATORIOP4_FECHA_H
+#endif //ARTICULO_FECHA_H

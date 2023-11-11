@@ -22,8 +22,11 @@ class Suprema: public Bruja {
 		// Getter / Setter
 		Fecha getFechaNac();
 		int getCantPoderes();
+		string getTipo() override;
+		int getPuntosPoder() override;
 
 		// Methods
+		void toStringDetallado() override;
 };
 
 #endif //OBLIGATORIOP4_SUPREMA_H

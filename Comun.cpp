@@ -1,4 +1,5 @@
 #include "Comun.h"
+#include <iostream>
 
 // PUBLIC
 // Constructor / Destructor
@@ -21,4 +22,25 @@ bool Comun::getVuelaEscoba() {
 	return this->vuelaEscoba;
 }
 
+string Comun::getTipo() {
+	return "Comun";
+}
+
+int Comun::getPuntosPoder() {
+	return this->cantHechizosComunes() +
+		2 * this->cantHechizosEspeciales() +
+		(this->getRegionOrigen() == "Salem" ? 1 : 0);
+}
+
+void Comun::setSuprema(Suprema * sup) {
+	this->super = sup;
+}
+
 // Methods
+void Comun::toStringDetallado() {
+	this->Bruja::toStringDetallado();
+	std::cout << "Region de origen: " << this->getRegionOrigen();
+	std::cout << "Vuela en escoba: " << this->getVuelaEscoba();
+	std::cout << "\nSuperior: ";
+	this->super->toStringDetallado();
+}

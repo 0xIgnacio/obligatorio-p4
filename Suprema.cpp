@@ -1,4 +1,5 @@
 #include "Suprema.h"
+#include <iostream>
 
 // PUBLIC
 // Constructor / Destructor
@@ -21,4 +22,20 @@ int Suprema::getCantPoderes() {
 	return this->cantPoderes;
 }
 
+string Suprema::getTipo() {
+	return "Suprema";
+}
+
+int Suprema::getPuntosPoder() {
+	return 2 * this->cantHechizosComunes() +
+		4 * this->cantHechizosEspeciales() +
+		(this->getFechaNac().getAno() < 1900 ? 5 : 0);
+}
+
 // Methods
+void Suprema::toStringDetallado() {
+	this->Bruja::toStringDetallado();
+	std::cout << "Fecha de nacimiento: ";
+	this->getFechaNac().toString();
+	std::cout << "Cantidad de poderes: " << this->getCantPoderes();
+}

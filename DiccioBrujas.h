@@ -2,6 +2,8 @@
 #define OBLIGATORIO_P4_DICCIOBRUJAS_H
 
 #include "Bruja.h"
+#include "Suprema.h"
+#include "Iterador.h"
 
 class DiccioBrujas {
 	private:
@@ -13,11 +15,13 @@ class DiccioBrujas {
 		};
 		node * arbol;
 
-		// Methods
-		void BorrarArbol(node *);
+		// Auxiliares
+		void DestructorAux(node *);
 		bool memberAux(node *, int);
 		void insertAux(node *, node *, int);
 		Bruja * findAux(node *, int);
+		void toStringAux(node *);
+		void masAncianaAux(node *, Fecha, int &);
 
 	public:
 		// Constructor / Destructor
@@ -30,6 +34,8 @@ class DiccioBrujas {
 		Bruja * find(int);
 
 		// Methods
+		void toString();
+		int masAnciana();														// Precondicion: existe al menos una bruja
 };
 
 #endif //OBLIGATORIO_P4_DICCIOBRUJAS_H

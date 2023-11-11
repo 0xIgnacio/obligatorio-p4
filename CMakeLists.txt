@@ -19,4 +19,8 @@ add_executable(obligatorio-p4 main.cpp
         DiccioBrujas.cpp
         DiccioBrujas.h
         SecHechizo.cpp
-        SecHechizo.h)
+        SecHechizo.h
+        Fachada.cpp
+        Fachada.h
+        Iterador.cpp
+        Iterador.h)

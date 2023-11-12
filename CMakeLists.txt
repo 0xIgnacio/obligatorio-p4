@@ -23,4 +23,6 @@ add_executable(obligatorio-p4 main.cpp
         Fachada.cpp
         Fachada.h
         Iterador.cpp
-        Iterador.h)
+        Iterador.h
+        Error.cpp
+        Error.h)

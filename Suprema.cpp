@@ -29,6 +29,7 @@ string Suprema::getTipo() {
 int Suprema::getPuntosPoder() {
 	return 2 * this->cantHechizosComunes() +
 		4 * this->cantHechizosEspeciales() +
+		this->getSecHechizo()->getTope() +
 		(this->getFechaNac().getAno() < 1900 ? 5 : 0);
 }
 

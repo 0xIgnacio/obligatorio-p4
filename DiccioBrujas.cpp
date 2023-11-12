@@ -75,6 +75,10 @@ DiccioBrujas::~DiccioBrujas() {
 }
 
 // Primitivas
+bool DiccioBrujas::esVacia() {
+	return this->arbol == nullptr;
+}
+
 bool DiccioBrujas::member(int num) {
 	return memberAux(this->arbol, num);
 }

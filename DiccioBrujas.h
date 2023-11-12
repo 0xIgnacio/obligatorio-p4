@@ -29,6 +29,7 @@ class DiccioBrujas {
 		~DiccioBrujas();
 
 		// Primitivas
+		bool esVacia();
 		bool member(int);
 		void insert(Bruja *);
 		Bruja * find(int);

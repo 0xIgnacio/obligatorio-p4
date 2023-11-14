@@ -1,4 +1,5 @@
 #include "Fachada.h"
+#include <iostream>
 
 int main() {
 	Fachada test = Fachada();
@@ -11,11 +12,32 @@ int main() {
 					new Comun("Salem", true, 2, "Maria"),
 					new Comun("Montevideo", false, 3, "Riquelme"),
 	};
-	Hechizo * arrtest2[4] = {
+	Hechizo * arrtest2[25] = {
 					new Hechizo("Linguardum"),
 					new Hechizo("Avada"),
 					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
-					new Especial(2015, "El hechizo especial supremo usado por Voldemort", "Messi"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Hechizo("Avada"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Especial(2023, "El hechizo mata hinchas de peñarol", "Kadavra"),
+					new Hechizo("Avada"),
+					new Hechizo("Avada"),
 	};
 
 	// Inserto 4 brujas
@@ -30,12 +52,18 @@ int main() {
 	test.registrarHechizo(2, arrtest2[1], testError);
 	test.registrarHechizo(3, arrtest2[0], testError);
 
+	for (int i = 4; i < 25; ++i) {
+		test.registrarHechizo(2, arrtest2[i], testError);
+		testError.mostrarError();
+	}
+
+	std::cout << "\n\n";
 
 	// Etc
 	test.listarAquelarre(iter, testError);
 	iter.Listar();
 
-	test.listarBruja(3, testError);
+	test.listarBruja(2, testError);
 
 
 	return 0;

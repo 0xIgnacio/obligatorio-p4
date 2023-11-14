@@ -1,4 +1,5 @@
 #include "SecHechizo.h"
+#include <iostream>
 
 // PUBLIC
 // Constructor / Destructor
@@ -22,7 +23,7 @@ Hechizo * SecHechizo::getHechizo(int id) {
 
 // Primitivas
 void SecHechizo::insert(Hechizo * nuevo) {
-	nuevo->setNumero(this->tope);
+	nuevo->setNumero(this->tope+1);
 	this->hechizos[this->getTope()] = nuevo;
 	this->tope++;																	// Inserto en el tope
 }
@@ -37,8 +38,10 @@ bool SecHechizo::existe(int id) {
 
 // Methods
 void SecHechizo::toString() {
-	for (int i = 0; i < this->getTope(); ++i)
+	for (int i = 0; i < this->getTope(); ++i) {
+		std::cout << "\n" << "\t";
 		this->hechizos[i]->toString();
+	}
 }
 
 int SecHechizo::cantComunes() {

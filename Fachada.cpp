@@ -49,12 +49,10 @@ void Fachada::registrarHechizo(int id, Hechizo * nuevo, Error & tipo) {
 	if (!this->Brujas.esVacia()) {
 		if (this->Brujas.member(id)) {
 			SecHechizo * secaux = this->Brujas.find(id)->getSecHechizo();
-			if (!secaux->existe(nuevo->getNumero())) {
 				if (!secaux->estaLleno()) {
 					Bruja * aux = this->Brujas.find(id);
 					aux->agregarHechizo(nuevo);
 				} else tipo.SetTipoError(HechizosLlenos);
-			} else tipo.SetTipoError(HechizoExiste);
 		} else tipo.SetTipoError(BrujaNoExiste);
 	} else tipo.SetTipoError(ArbolVacio);
 }

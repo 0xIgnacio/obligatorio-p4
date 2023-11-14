@@ -6,7 +6,7 @@ Especial::Especial(): Hechizo(), descripcion() {
 	this->anoManifesto = 0;
 }
 
-Especial::Especial(int anoManifesto, string descripcion, string texto): Hechizo(texto), descripcion() {
+Especial::Especial(int anoManifesto, string descripcion, string texto): Hechizo(texto), descripcion(descripcion) {
 	this->anoManifesto = anoManifesto;
 }
 

@@ -7,7 +7,7 @@ Hechizo::Hechizo(): texto() {
 	this->numero = 0;
 }
 
-Hechizo::Hechizo(string texto): texto() {}
+Hechizo::Hechizo(string texto): texto(texto) {}
 
 Hechizo::~Hechizo() {}
 

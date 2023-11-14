@@ -17,6 +17,7 @@ class Error {
 		TipoError ObtenerTipoError();
 		void SetTipoError(TipoError);
 		bool HayError();
+		void mostrarError();
 };
 
 #endif //OBLIGATORIO_P4_ERROR_H

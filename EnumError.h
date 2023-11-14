@@ -7,7 +7,6 @@ enum TipoError {
 		ComunExiste,
 		BrujaNoExiste,
 		ArbolVacio,
-		HechizoExiste,
 		HechizoNoExiste,
 		HechizosLlenos,
 	};

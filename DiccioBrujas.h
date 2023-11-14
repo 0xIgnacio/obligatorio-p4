@@ -22,6 +22,7 @@ class DiccioBrujas {
 		Bruja * findAux(node *, int);
 		void toStringAux(node *);
 		void masAncianaAux(node *, Fecha, int &);
+		void cargarIteradorAux(node *, Iterador &);
 
 	public:
 		// Constructor / Destructor
@@ -37,6 +38,7 @@ class DiccioBrujas {
 		// Methods
 		void toString();
 		int masAnciana();														// Precondicion: existe al menos una bruja
+		void cargarIterador(Iterador &);
 };
 
 #endif //OBLIGATORIO_P4_DICCIOBRUJAS_H

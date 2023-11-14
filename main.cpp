@@ -1,9 +1,9 @@
 #include "Fachada.h"
-#include <iostream>
 
 int main() {
 	Fachada test = Fachada();
 	Error testError = Error();
+	Iterador iter = Iterador();
 
 	Bruja * arrtest[4] = {
 					new Suprema(Fecha(22, 10, 1800), 3, 0, "Florencia"),
@@ -22,6 +22,7 @@ int main() {
 	test.nuevaSuprema((Suprema *) arrtest[1], testError);
 	test.nuevaSuprema((Suprema *) arrtest[0], testError);
 	test.nuevaComun((Comun *) arrtest[3], 1,testError);
+	test.nuevaComun((Comun *) arrtest[2], 1,testError);
 
 	// Les agrego 4 hechizos
 	test.registrarHechizo(0, arrtest2[3], testError);
@@ -31,7 +32,8 @@ int main() {
 
 
 	// Etc
-	test.listarAquelarre(testError);
+	test.listarAquelarre(iter, testError);
+	iter.Listar();
 
 
 	return 0;

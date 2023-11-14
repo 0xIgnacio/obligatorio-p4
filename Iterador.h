@@ -1,7 +1,7 @@
 #ifndef UNTITLED1_ITERADOR_H
 #define UNTITLED1_ITERADOR_H
 
-#include "DiccioBrujas.h"
+#include "Bruja.h"
 
 class Iterador {
 private:

@@ -23,9 +23,9 @@ void Fachada::nuevaComun(Comun * nueva, int super, Error & tipo) {
 	} else tipo.SetTipoError(ComunExiste);
 }
 
-void Fachada::listarAquelarre(Error & tipo) {
+void Fachada::listarAquelarre(Iterador &iter, Error & tipo) {
 	if (!this->Brujas.esVacia())
-		this->Brujas.toString();
+		this->Brujas.cargarIterador(iter);
 	else tipo.SetTipoError(ArbolVacio);
 }
 

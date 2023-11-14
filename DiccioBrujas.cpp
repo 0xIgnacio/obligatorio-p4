@@ -64,6 +64,14 @@ void DiccioBrujas::masAncianaAux(node * aux, Fecha faux, int & mayor) {
 	}
 }
 
+void DiccioBrujas::cargarIteradorAux(DiccioBrujas::node *aux, Iterador &iter) {
+	if (aux != nullptr) {
+		cargarIteradorAux(aux->izq, iter);
+		iter.Insertar(aux->info);
+		cargarIteradorAux(aux->der, iter);
+	}
+}
+
 // PUBLIC
 // Constructor / Destructor
 DiccioBrujas::DiccioBrujas() {
@@ -111,4 +119,8 @@ int DiccioBrujas::masAnciana() {
 	int mayor = saux->getIdentificador();
 	this->masAncianaAux(this->arbol, faux, mayor);
 	return mayor;
+}
+
+void DiccioBrujas::cargarIterador(Iterador &iter) {
+	cargarIteradorAux(this->arbol, iter);
 }

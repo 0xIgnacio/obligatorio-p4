@@ -39,8 +39,8 @@ void Comun::setSuprema(Suprema * sup) {
 // Methods
 void Comun::toStringDetallado() {
 	this->Bruja::toStringDetallado();
-	std::cout << "Region de origen: " << this->getRegionOrigen();
-	std::cout << "Vuela en escoba: " << this->getVuelaEscoba();
+	std::cout << "\nRegion de origen: " << this->getRegionOrigen();
+	std::cout << "\nVuela en escoba: " << this->getVuelaEscoba();
 	std::cout << "\nSuperior: ";
 	this->super->toStringDetallado();
 }

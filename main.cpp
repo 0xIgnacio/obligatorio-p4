@@ -35,6 +35,8 @@ int main() {
 	test.listarAquelarre(iter, testError);
 	iter.Listar();
 
+	test.listarBruja(3, testError);
+
 
 	return 0;
 }

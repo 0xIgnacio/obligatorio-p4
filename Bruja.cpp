@@ -48,10 +48,10 @@ void Bruja::toStringSimple() {
 }
 
 void Bruja::toStringDetallado() {
-	std::cout << "Identificador: " << this->getIdentificador();
-	std::cout << "Tipo: " << this->getTipo();
-	std::cout << "Puntos de poder: " << this->getPuntosPoder();
-	std::cout << "Nombre: " << this->getNombre();
-	std::cout << "Hechizos: ";
+	std::cout << "\nIdentificador: " << this->getIdentificador();
+	std::cout << "\nTipo: " << this->getTipo();
+	std::cout << "\nPuntos de poder: " << this->getPuntosPoder();
+	std::cout << "\nNombre: " << this->getNombre();
+	std::cout << "\nHechizos: ";
 	this->hechizos.toString();
 }

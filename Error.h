@@ -1,16 +1,7 @@
 #ifndef OBLIGATORIO_P4_ERROR_H
 #define OBLIGATORIO_P4_ERROR_H
 
-enum TipoError {
-	SinError,
-	SupremaExiste,
-	ComunExiste,
-	BrujaNoExiste,
-	ArbolVacio,
-	HechizoExiste,
-	HechizoNoExiste,
-	HechizosLlenos,
-};
+#include "EnumError.h"
 
 class Error {
 	private:

@@ -36,7 +36,7 @@ int Suprema::getPuntosPoder() {
 // Methods
 void Suprema::toStringDetallado() {
 	this->Bruja::toStringDetallado();
-	std::cout << "Fecha de nacimiento: ";
+	std::cout << "\nFecha de nacimiento: ";
 	this->getFechaNac().toString();
-	std::cout << "Cantidad de poderes: " << this->getCantPoderes();
+	std::cout << "\nCantidad de poderes: " << this->getCantPoderes();
 }

@@ -1,0 +1,14 @@
+# ninja log v5
+2	2407	1699826615897485349	CMakeFiles/obligatorio-p4.dir/Especial.cpp.o	e09505fcf0d5acce
+3	486	1699909713466893085	CMakeFiles/obligatorio-p4.dir/main.cpp.o	289fce77234f7844
+2	497	1699907366202386554	CMakeFiles/obligatorio-p4.dir/Comun.cpp.o	ff37f6cecef8e2d7
+2	2386	1699855218968329705	CMakeFiles/obligatorio-p4.dir/Suprema.cpp.o	edc5bf5211001f70
+3	2465	1699826615958988947	CMakeFiles/obligatorio-p4.dir/Fecha.cpp.o	87fb6de001c3e039
+3	490	1699909713472156126	CMakeFiles/obligatorio-p4.dir/Bruja.cpp.o	847ef566f8596053
+1	2470	1699826615964300794	CMakeFiles/obligatorio-p4.dir/Hechizo.cpp.o	21c435356e91f114
+2447	2651	1699826616146605692	CMakeFiles/obligatorio-p4.dir/Iterador.cpp.o	4481d577c62804f4
+490	523	1699909713505365732	obligatorio-p4	544fff4d970ad230
+2453	2474	1699826615970604360	CMakeFiles/obligatorio-p4.dir/Error.cpp.o	9da23fea40f4b909
+2411	2623	1699826616118185063	CMakeFiles/obligatorio-p4.dir/SecHechizo.cpp.o	25c1aaf4f87f73c9
+2419	2641	1699826616135602244	CMakeFiles/obligatorio-p4.dir/Fachada.cpp.o	3a9059394129eb31
+2	414	1699909610124036157	CMakeFiles/obligatorio-p4.dir/DiccioBrujas.cpp.o	d4523d6f0c49173

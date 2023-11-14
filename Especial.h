@@ -12,7 +12,7 @@ class Especial: public Hechizo {
 	public:
 		// Constructor / Destructor
 		Especial();
-		Especial(int, string, int, string);
+		Especial(int, string, string);
 		~Especial();
 
 		// Getter / Setter

@@ -4,8 +4,8 @@
 // Methods
 void DiccioBrujas::DestructorAux(node * raiz) {
 	if (raiz != nullptr) {
-		DestructorAux(this->arbol->der);							// Recorro a la hoja derecha
-		DestructorAux(this->arbol->izq);							// Recorro a la hoja izquierda
+		DestructorAux(raiz->der);							// Recorro a la hoja derecha
+		DestructorAux(raiz->izq);							// Recorro a la hoja izquierda
 		delete raiz;																// A la vuelta recursiva luego de recorrer subarboles elimino el nodo
 	}
 }

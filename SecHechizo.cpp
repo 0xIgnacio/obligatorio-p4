@@ -22,6 +22,7 @@ Hechizo * SecHechizo::getHechizo(int id) {
 
 // Primitivas
 void SecHechizo::insert(Hechizo * nuevo) {
+	nuevo->setNumero(this->tope);
 	this->hechizos[this->getTope()] = nuevo;
 	this->tope++;																	// Inserto en el tope
 }

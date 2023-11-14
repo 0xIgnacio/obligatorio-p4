@@ -7,9 +7,7 @@ Hechizo::Hechizo(): texto() {
 	this->numero = 0;
 }
 
-Hechizo::Hechizo(int numero, string texto): texto() {
-	this->numero = numero;
-}
+Hechizo::Hechizo(string texto): texto() {}
 
 Hechizo::~Hechizo() {}
 
@@ -24,6 +22,10 @@ string Hechizo::getTexto() {
 
 string Hechizo::getTipo() {
 	return "Comun";
+}
+
+void Hechizo::setNumero(int num) {
+	this->numero = num;
 }
 
 // Methods

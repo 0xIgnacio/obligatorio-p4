@@ -7,7 +7,7 @@ Comun::Comun(): Bruja(), regionOrigen() {
 	this->vuelaEscoba = false;
 }
 
-Comun::Comun(string regionOrigen, bool vuelaEscoba, int identificador, string nombre): Bruja(identificador, nombre), regionOrigen() {
+Comun::Comun(string regionOrigen, bool vuelaEscoba, int identificador, string nombre): Bruja(identificador, nombre), regionOrigen(regionOrigen) {
 	this->vuelaEscoba = vuelaEscoba;
 }
 

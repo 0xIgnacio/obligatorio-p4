@@ -43,6 +43,7 @@ void Bruja::agregarHechizo(Hechizo * nuevo) {
 
 void Bruja::toStringSimple() {
 	std::cout << this->getIdentificador() << ". " << this->getNombre() << ", bruja " << this->getTipo();
+	std::cout << "\n";
 	// a3. Potranca, bruja Común
 }
 

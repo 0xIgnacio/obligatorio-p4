@@ -13,13 +13,14 @@ class Hechizo {
 	public:
 		// Constructor / Destructor
 		Hechizo();
-		Hechizo(int, string);
+		Hechizo(string);
 		~Hechizo();
 
 		// Getter / Setter
 		int getNumero();
 		string getTexto();
 		virtual string getTipo();
+		void setNumero(int);
 
 		// Methods
 		void toString();

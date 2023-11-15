@@ -14,7 +14,7 @@ class Comun: public Bruja {
 	public:
 		// Constructor / Destructor
 		Comun();
-		Comun(string, bool, int, string);
+		Comun(string, bool, string);
 		~Comun();
 
 		// Getter / Setter

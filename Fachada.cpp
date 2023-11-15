@@ -13,7 +13,7 @@ void Fachada::nuevaSuprema(Suprema * nueva, Error & tipo) {
 	else tipo.SetTipoError(SupremaExiste);
 }
 
-void Fachada::nuevaComun(Comun * nueva, int super, Error & tipo) {
+void Fachada::nuevaComun(Comun * nueva, string super, Error & tipo) {
 	if (!this->Brujas.member(nueva->getIdentificador())) {
 		if (this->Brujas.member(super)) {
 			Suprema * aux = (Suprema *) (this->Brujas.find(super));
@@ -29,7 +29,7 @@ void Fachada::listarAquelarre(Iterador &iter, Error & tipo) {
 	else tipo.SetTipoError(ArbolVacio);
 }
 
-void Fachada::listarBruja(int id, Error & tipo) {
+void Fachada::listarBruja(string id, Error & tipo) {
 	if (!this->Brujas.esVacia()) {
 		if (this->Brujas.member(id)) {
 			Bruja * aux = this->Brujas.find(id);
@@ -40,12 +40,12 @@ void Fachada::listarBruja(int id, Error & tipo) {
 
 void Fachada::listarSupremaMayor(Error & tipo) {
 	if (!this->Brujas.esVacia()) {
-		int mayor = this->Brujas.masAnciana();
+		string mayor = this->Brujas.masAnciana();
 		this->listarBruja(mayor, tipo);
 	} else tipo.SetTipoError(ArbolVacio);
 }
 
-void Fachada::registrarHechizo(int id, Hechizo * nuevo, Error & tipo) {
+void Fachada::registrarHechizo(string id, Hechizo * nuevo, Error & tipo) {
 	if (!this->Brujas.esVacia()) {
 		if (this->Brujas.member(id)) {
 			SecHechizo * secaux = this->Brujas.find(id)->getSecHechizo();
@@ -57,7 +57,7 @@ void Fachada::registrarHechizo(int id, Hechizo * nuevo, Error & tipo) {
 	} else tipo.SetTipoError(ArbolVacio);
 }
 
-void Fachada::listarHechizo(int idBruja, int idHechizo, Error & tipo) {
+void Fachada::listarHechizo(string idBruja, int idHechizo, Error & tipo) {
 	if (!this->Brujas.esVacia()) {
 		if (this->Brujas.member(idBruja)) {
 			SecHechizo * secaux = this->Brujas.find(idBruja)->getSecHechizo();
@@ -68,7 +68,7 @@ void Fachada::listarHechizo(int idBruja, int idHechizo, Error & tipo) {
 	} else tipo.SetTipoError(ArbolVacio);
 }
 
-int Fachada::hechizosEspecialesAno(int idBruja, int ano, Error & tipo) {
+int Fachada::hechizosEspecialesAno(string idBruja, int ano, Error & tipo) {
 	if (!this->Brujas.esVacia()) {
 		if (this->Brujas.member(idBruja)) {
 			Bruja * aux = this->Brujas.find(idBruja);

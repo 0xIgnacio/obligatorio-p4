@@ -16,7 +16,7 @@ class Suprema: public Bruja {
 	public:
 		// Constructor / Destructor
 		Suprema();
-		Suprema(Fecha, int, int, string);
+		Suprema(Fecha, int, string);
 		~Suprema();
 
 		// Getter / Setter

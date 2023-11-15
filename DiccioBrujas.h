@@ -17,11 +17,11 @@ class DiccioBrujas {
 
 		// Auxiliares
 		void DestructorAux(node *);
-		bool memberAux(node *, int);
-		void insertAux(node *, node *, int);
-		Bruja * findAux(node *, int);
+		bool memberAux(node *, string);
+		void insertAux(node *, node *, string);
+		Bruja * findAux(node *, string);
 		void toStringAux(node *);
-		void masAncianaAux(node *, Fecha, int &);
+		void masAncianaAux(node *, Fecha, string &);
 		void cargarIteradorAux(node *, Iterador &);
 
 	public:
@@ -31,13 +31,13 @@ class DiccioBrujas {
 
 		// Primitivas
 		bool esVacia();
-		bool member(int);
+		bool member(string);
 		void insert(Bruja *);
-		Bruja * find(int);
+		Bruja * find(string);
 
 		// Methods
 		void toString();
-		int masAnciana();														// Precondicion: existe al menos una bruja
+		string masAnciana();														// Precondicion: existe al menos una bruja
 		void cargarIterador(Iterador &);
 };
 

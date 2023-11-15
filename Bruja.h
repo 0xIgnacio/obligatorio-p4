@@ -8,18 +8,22 @@ using namespace std;
 class Bruja {
 	private:
 		// Atributes
-		int identificador;
+		string identificador;
 		string nombre;
 		SecHechizo hechizos;
+		static int contador;
+
+		// Mehtods
+		string generarIdentificador(int);
 
 	public:
 		// Constructor / Destructor
 		Bruja();
-		Bruja(int, string);
+		Bruja(string);
 		virtual ~Bruja();
 
 		// Getter / Setter
-		int getIdentificador();
+		string getIdentificador();
 		string getNombre();
 		SecHechizo * getSecHechizo();
 		int cantHechizosComunes();

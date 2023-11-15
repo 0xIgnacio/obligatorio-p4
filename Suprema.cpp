@@ -7,7 +7,7 @@ Suprema::Suprema():Bruja(),fechaNac() {
 	this->cantPoderes = 0;
 }
 
-Suprema::Suprema(Fecha fechaNac, int cantPoderes, int identificador, string nombre):Bruja(identificador, nombre), fechaNac(fechaNac) {
+Suprema::Suprema(Fecha fechaNac, int cantPoderes, string nombre):Bruja(nombre), fechaNac(fechaNac) {
 	this->cantPoderes = cantPoderes;
 }
 

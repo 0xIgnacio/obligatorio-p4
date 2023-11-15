@@ -1,20 +1,38 @@
 #include "Bruja.h"
 #include <iostream>
 
+// PRIVATE
+// Methods
+string Bruja::generarIdentificador(int num) {
+	int limite = 5;
+	// xxxxx		Ej.: ab2e5
+	string id;
+	while (id.length() < limite) {
+		int resto = num % 36;
+		char caracter;
+		if (resto < 10) caracter = '0' + resto;
+		else caracter = 'A' + (resto - 10);
+		id += caracter;
+		num /= 36;
+	}
+	return id;
+}
+
 // PUBLIC
 // Constructor / Destructor
 Bruja::Bruja():nombre(), hechizos() {
-	this->identificador = 0;
+	this->identificador = '0';
 }
 
-Bruja::Bruja(int identificador, string nombre):nombre(nombre), hechizos() {
-	this->identificador = identificador;
+Bruja::Bruja(string nombre):nombre(nombre), hechizos() {
+	this->identificador = generarIdentificador(this->contador);
+	this->contador++;
 }
 
 Bruja::~Bruja() {}
 
 // Getter / Setter
-int Bruja::getIdentificador() {
+string Bruja::getIdentificador() {
 	return this->identificador;
 }
 

@@ -1,16 +1,18 @@
 #include "Fachada.h"
 #include <iostream>
 
+int Bruja::contador = 0;
+
 int main() {
 	Fachada test = Fachada();
 	Error testError = Error();
 	Iterador iter = Iterador();
 
 	Bruja * arrtest[4] = {
-					new Suprema(Fecha(22, 10, 1800), 3, 0, "Florencia"),
-					new Suprema(Fecha(15, 9, 1932), 1, 1, "Maradona"),
-					new Comun("Salem", true, 2, "Maria"),
-					new Comun("Montevideo", false, 3, "Riquelme"),
+					new Suprema(Fecha(22, 10, 1800), 0, "Florencia"),
+					new Suprema(Fecha(15, 9, 1932), 1, "Maradona"),
+					new Comun("Salem", true, "Maria"),
+					new Comun("Montevideo", false, "Riquelme"),
 	};
 	Hechizo * arrtest2[25] = {
 					new Hechizo("Linguardum"),
@@ -43,17 +45,17 @@ int main() {
 	// Inserto 4 brujas
 	test.nuevaSuprema((Suprema *) arrtest[1], testError);
 	test.nuevaSuprema((Suprema *) arrtest[0], testError);
-	test.nuevaComun((Comun *) arrtest[3], 1,testError);
-	test.nuevaComun((Comun *) arrtest[2], 1,testError);
+	test.nuevaComun((Comun *) arrtest[3], "00000",testError);
+	test.nuevaComun((Comun *) arrtest[2], "00000",testError);
 
 	// Les agrego 4 hechizos
-	test.registrarHechizo(0, arrtest2[3], testError);
-	test.registrarHechizo(1, arrtest2[2], testError);
-	test.registrarHechizo(2, arrtest2[1], testError);
-	test.registrarHechizo(3, arrtest2[0], testError);
+	test.registrarHechizo("00000", arrtest2[3], testError);
+	test.registrarHechizo("00000", arrtest2[2], testError);
+	test.registrarHechizo("00000", arrtest2[1], testError);
+	test.registrarHechizo("00000", arrtest2[0], testError);
 
 	for (int i = 4; i < 25; ++i) {
-		test.registrarHechizo(2, arrtest2[i], testError);
+		test.registrarHechizo("00000", arrtest2[i], testError);
 		testError.mostrarError();
 	}
 
@@ -63,7 +65,7 @@ int main() {
 	test.listarAquelarre(iter, testError);
 	iter.Listar();
 
-	test.listarBruja(2, testError);
+	test.listarBruja("30000", testError);
 
 
 	return 0;

@@ -10,7 +10,7 @@ void DiccioBrujas::DestructorAux(node * raiz) {
 	}
 }
 
-bool DiccioBrujas::memberAux(node * aux, int num) {
+bool DiccioBrujas::memberAux(node * aux, string num) {
 	if (aux != nullptr) {
 		if (aux->info->getIdentificador() > num)
 			return memberAux(aux->izq, num);					// Si es menor recorro a la izquierda
@@ -20,7 +20,7 @@ bool DiccioBrujas::memberAux(node * aux, int num) {
 	} else return false;													// Al llegar a la hoja, no existe, retorno false
 }
 
-void DiccioBrujas::insertAux(node * aux, node * nuevo, int num) {
+void DiccioBrujas::insertAux(node * aux, node * nuevo, string num) {
 	if (aux != nullptr) {
 		if (aux->info->getIdentificador() > num) {
 			if (aux->izq == nullptr)
@@ -34,7 +34,7 @@ void DiccioBrujas::insertAux(node * aux, node * nuevo, int num) {
 	}
 }
 
-Bruja* DiccioBrujas::findAux(node * aux, int num) {
+Bruja* DiccioBrujas::findAux(node * aux, string num) {
 	if (aux != nullptr) {
 		if (aux->info->getIdentificador() > num) {
 			return findAux(aux->izq, num);
@@ -52,7 +52,7 @@ void DiccioBrujas::toStringAux(node * aux) {
 	}
 }
 
-void DiccioBrujas::masAncianaAux(node * aux, Fecha faux, int & mayor) {
+void DiccioBrujas::masAncianaAux(node * aux, Fecha faux, string & mayor) {
 	if (aux != nullptr) {
 		if (aux->info->getTipo() == "Suprema") {
 			Suprema * superaux = (Suprema *) aux->info;
@@ -87,7 +87,7 @@ bool DiccioBrujas::esVacia() {
 	return this->arbol == nullptr;
 }
 
-bool DiccioBrujas::member(int num) {
+bool DiccioBrujas::member(string num) {
 	return memberAux(this->arbol, num);
 }
 
@@ -103,7 +103,7 @@ void DiccioBrujas::insert(Bruja * nueva) {
 	else insertAux(this->arbol, nuevo, nuevo->info->getIdentificador());
 }
 
-Bruja * DiccioBrujas::find(int num) {
+Bruja * DiccioBrujas::find(string num) {
 	return findAux(this->arbol, num);
 }
 
@@ -112,11 +112,11 @@ void DiccioBrujas::toString() {
 	this->toStringAux(this->arbol);
 }
 
-int DiccioBrujas::masAnciana() {
+string DiccioBrujas::masAnciana() {
 	Suprema * saux = (Suprema *) arbol->info;
 	Fecha faux = saux->getFechaNac();
 
-	int mayor = saux->getIdentificador();
+	string mayor = saux->getIdentificador();
 	this->masAncianaAux(this->arbol, faux, mayor);
 	return mayor;
 }

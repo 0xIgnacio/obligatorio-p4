@@ -1,16 +1,14 @@
 #include "Fachada.h"
 #include <iostream>
 
-int Bruja::contador = 0;
-
 int main() {
 	Fachada test = Fachada();
 	Error testError = Error();
 	Iterador iter = Iterador();
 
 	Bruja * arrtest[4] = {
-					new Suprema(Fecha(22, 10, 1800), 0, "Florencia"),
-					new Suprema(Fecha(15, 9, 1932), 1, "Maradona"),
+					new Suprema(Fecha(22, 10, 1800), 13, "Florencia"),
+					new Suprema(Fecha(15, 9, 1932), 23, "Maradona"),
 					new Comun("Salem", true, "Maria"),
 					new Comun("Montevideo", false, "Riquelme"),
 	};
@@ -66,7 +64,12 @@ int main() {
 	iter.Listar();
 
 	test.listarBruja("30000", testError);
-
+	cout << "\n";
+	test.listarSupremaMayor(testError);
+	cout << "\n";
+	test.listarHechizo("00000", 2, testError);
+	cout << "\n";
+	cout << test.hechizosEspecialesAno("00000", 2023, testError);
 
 	return 0;
 }

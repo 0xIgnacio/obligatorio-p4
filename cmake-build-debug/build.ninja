@@ -127,6 +127,12 @@ build CMakeFiles/obligatorio-p4.dir/EnumError.cpp.o: CXX_COMPILER__obligatorio-p
   OBJECT_DIR = CMakeFiles/obligatorio-p4.dir
   OBJECT_FILE_DIR = CMakeFiles/obligatorio-p4.dir
 
+build CMakeFiles/obligatorio-p4.dir/main-test.cpp.o: CXX_COMPILER__obligatorio-p4_unscanned_Debug /Users/ignacioperciante/Developer/C_C++/obligatorio-p4/main-test.cpp || cmake_object_order_depends_target_obligatorio-p4
+  DEP_FILE = CMakeFiles/obligatorio-p4.dir/main-test.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/obligatorio-p4.dir
+  OBJECT_FILE_DIR = CMakeFiles/obligatorio-p4.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target obligatorio-p4
@@ -135,7 +141,7 @@ build CMakeFiles/obligatorio-p4.dir/EnumError.cpp.o: CXX_COMPILER__obligatorio-p
 #############################################
 # Link the executable obligatorio-p4
 
-build obligatorio-p4: CXX_EXECUTABLE_LINKER__obligatorio-p4_Debug CMakeFiles/obligatorio-p4.dir/main.cpp.o CMakeFiles/obligatorio-p4.dir/Bruja.cpp.o CMakeFiles/obligatorio-p4.dir/Hechizo.cpp.o CMakeFiles/obligatorio-p4.dir/Suprema.cpp.o CMakeFiles/obligatorio-p4.dir/Comun.cpp.o CMakeFiles/obligatorio-p4.dir/Especial.cpp.o CMakeFiles/obligatorio-p4.dir/Fecha.cpp.o CMakeFiles/obligatorio-p4.dir/DiccioBrujas.cpp.o CMakeFiles/obligatorio-p4.dir/SecHechizo.cpp.o CMakeFiles/obligatorio-p4.dir/Fachada.cpp.o CMakeFiles/obligatorio-p4.dir/Iterador.cpp.o CMakeFiles/obligatorio-p4.dir/Error.cpp.o CMakeFiles/obligatorio-p4.dir/EnumError.cpp.o
+build obligatorio-p4: CXX_EXECUTABLE_LINKER__obligatorio-p4_Debug CMakeFiles/obligatorio-p4.dir/main.cpp.o CMakeFiles/obligatorio-p4.dir/Bruja.cpp.o CMakeFiles/obligatorio-p4.dir/Hechizo.cpp.o CMakeFiles/obligatorio-p4.dir/Suprema.cpp.o CMakeFiles/obligatorio-p4.dir/Comun.cpp.o CMakeFiles/obligatorio-p4.dir/Especial.cpp.o CMakeFiles/obligatorio-p4.dir/Fecha.cpp.o CMakeFiles/obligatorio-p4.dir/DiccioBrujas.cpp.o CMakeFiles/obligatorio-p4.dir/SecHechizo.cpp.o CMakeFiles/obligatorio-p4.dir/Fachada.cpp.o CMakeFiles/obligatorio-p4.dir/Iterador.cpp.o CMakeFiles/obligatorio-p4.dir/Error.cpp.o CMakeFiles/obligatorio-p4.dir/EnumError.cpp.o CMakeFiles/obligatorio-p4.dir/main-test.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/obligatorio-p4.dir
   POST_BUILD = :

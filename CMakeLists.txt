@@ -27,4 +27,5 @@ add_executable(obligatorio-p4 main.cpp
         Error.cpp
         Error.h
         EnumError.cpp
-        EnumError.h)
+        EnumError.h
+        main-test.cpp)

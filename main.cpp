@@ -1,6 +1,8 @@
 #include "Fachada.h"
 #include <iostream>
 
+int Bruja::contador = 0;
+
 int main() {
 	Fachada test = Fachada();
 	Error testError = Error();

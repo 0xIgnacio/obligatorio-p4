@@ -28,4 +28,6 @@ add_executable(obligatorio-p4 main.cpp
         Error.h
         EnumError.cpp
         EnumError.h
-        )
+        Menu.h
+        Menu.cpp
+)

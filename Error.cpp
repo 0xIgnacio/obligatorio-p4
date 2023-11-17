@@ -29,25 +29,27 @@ bool Error::HayError() {
 void Error::mostrarError() {
 	switch (this->info) {
 		case SupremaExiste:
-				cout << "\nError: Bruja suprema ya existe";
+				cout << "\nError: Bruja suprema ya existe" << endl;
 			break;
 		case ComunExiste:
-				cout << "\nError: Bruja comunn ya existe";
+				cout << "\nError: Bruja comunn ya existe" << endl;
 			break;
 		case BrujaNoExiste:
-				cout << "\nError: Bruja no existe";
+				cout << "\nError: Bruja no existe" << endl;
 			break;
 		case ArbolVacio:
-				cout << "\nError: El árbol está vacío";
+				cout << "\nError: El árbol está vacío" << endl;
 			break;
 		case HechizoNoExiste:
-				cout << "\nError: El hechizo no existe";
+				cout << "\nError: El hechizo no existe" << endl;
 			break;
 		case HechizosLlenos:
-				cout << "\nError: Límite de hechizos alcanzado";
+				cout << "\nError: Límite de hechizos alcanzado" << endl;
 			break;
 		default:
-				cout << "\nError: desconocido";
+				cout << "\nError: desconocido" << endl;
 			break;
 	}
+
+	this->info = SinError;
 }

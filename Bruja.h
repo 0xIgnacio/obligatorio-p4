@@ -11,7 +11,7 @@ class Bruja {
 		string identificador;
 		string nombre;
 		SecHechizo hechizos;
-		static int contador;
+		// static int contador;
 
 		// Mehtods
 		string generarIdentificador(int);
@@ -19,7 +19,7 @@ class Bruja {
 	public:
 		// Constructor / Destructor
 		Bruja();
-		Bruja(string);
+		Bruja(string, string);
 		virtual ~Bruja();
 
 		// Getter / Setter

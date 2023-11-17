@@ -51,7 +51,7 @@ void Menu::menuReq6() {
 	cout << "===============| Agregar hechizo: |===============" << endl;
 	cout << "\t1. Comun" << endl;
 	cout << "\t2. Especial" << endl;
-	cout << "\nIngrese opcion: " << endl;
+	cout << "\nIngrese opcion: ";
 }
 
 void Menu::menuReq7() {

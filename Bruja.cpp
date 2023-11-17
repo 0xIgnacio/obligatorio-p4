@@ -3,6 +3,7 @@
 
 // PRIVATE
 // Methods
+/* Para hacer el identificador automático
 string Bruja::generarIdentificador(int num) {
 	int limite = 5;
 	// xxxxx		Ej.: ab2e5
@@ -17,6 +18,7 @@ string Bruja::generarIdentificador(int num) {
 	}
 	return id;
 }
+*/
 
 // PUBLIC
 // Constructor / Destructor
@@ -24,9 +26,9 @@ Bruja::Bruja():nombre(), hechizos() {
 	this->identificador = '0';
 }
 
-Bruja::Bruja(string nombre):nombre(nombre), hechizos() {
-	this->identificador = generarIdentificador(this->contador);
-	this->contador++;
+Bruja::Bruja(string identificador, string nombre):nombre(nombre), hechizos() {
+	this->identificador = identificador;
+	// this->contador++;
 }
 
 Bruja::~Bruja() {}
@@ -71,5 +73,7 @@ void Bruja::toStringDetallado() {
 	std::cout << "\nPuntos de poder: " << this->getPuntosPoder();
 	std::cout << "\nNombre: " << this->getNombre();
 	std::cout << "\nHechizos: ";
-	this->hechizos.toString();
+	if (this->hechizos.getTope() == 0)
+		cout << "No tiene hechizos";
+	else this->hechizos.toString();
 }

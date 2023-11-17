@@ -3,7 +3,7 @@
 #include "Menu.h"
 using namespace std;
 
-int Bruja::contador = 0;
+// int Bruja::contador = 0;
 
 int main() {
 	cout<<noskipws;
@@ -14,18 +14,19 @@ int main() {
 	do {
 		Menu::menuPrincipal();
 		cin >> opcion;
-		std::cin.ignore();
 		switch (opcion) {
 			case 1: {
 				Menu::menuReq1();
-				int diaF, mesF, anioF, cantPoderesN; string nombreN;
+				int diaF, mesF, anioF, cantPoderesN; string idBruja, nombreN;
+				cout << "Ingrese ID. de la bruja: ";
+				cin >> idBruja;
 				cout << "Ingrese nombre: ";
 				cin >> nombreN;
 				cout << "Ingrese fecha de nacimiento: ";
 				scanf("%d/%d/%d", &diaF, &mesF, &anioF);
 				cout << "Ingrese cantidad de poderes: ";
 				cin >> cantPoderesN;
-				Suprema * nueva = new Suprema(Fecha(diaF, mesF, anioF), cantPoderesN, nombreN);
+				Suprema * nueva = new Suprema(Fecha(diaF, mesF, anioF), cantPoderesN, idBruja, nombreN);
 				info.nuevaSuprema(nueva, error);
 				if (error.HayError())
 					error.mostrarError();
@@ -33,7 +34,9 @@ int main() {
 				break;
 			case 2: {
 				Menu::menuReq2();
-				bool vuelaEscobaN; string regionOrigenN, nombreN, idSuperN;
+				bool vuelaEscobaN; string idBruja, regionOrigenN, nombreN, idSuperN;
+				cout << "Ingrese ID. de la bruja: ";
+				cin >> idBruja;
 				cout << "Ingrese nombre: ";
 				cin >> nombreN;
 				cout << "Region de origen: ";
@@ -42,7 +45,7 @@ int main() {
 				cin >> vuelaEscobaN;
 				cout << "ID. bruja superior: ";
 				cin >> idSuperN;
-				Comun * nueva = new Comun(regionOrigenN, vuelaEscobaN, nombreN);
+				Comun * nueva = new Comun(regionOrigenN, vuelaEscobaN, idBruja, nombreN);
 				info.nuevaComun(nueva, idSuperN, error);
 				if (error.HayError())
 					error.mostrarError();
@@ -60,7 +63,7 @@ int main() {
 			case 4: {
 				Menu::menuReq4();
 				string idL;
-				cout << "Ingrese ID.: " << endl;
+				cout << "Ingrese ID.: ";
 				cin >> idL;
 				info.listarBruja(idL, error);
 				if (error.HayError())
@@ -80,19 +83,19 @@ int main() {
 				int opcion0;
 				cin >> opcion0;
 				string textoN, IdBruja;
-				cout << "Ingrese nombre:" << endl;
+				cout << "Ingrese nombre:";
 				cin >> textoN;
 				if (opcion0 == 1) {
 					nuevo = new Hechizo(textoN);
 				} else if (opcion0 == 2) {
 					int anoN; string descripcionN;
-					cout << "Ingrese año en el que se manifesto: " << endl;
+					cout << "Ingrese año en el que se manifesto: ";
 					cin >> anoN;
-					cout << "Descripcion:" << endl;
+					cout << "Descripcion:";
 					cin >> descripcionN;
 					nuevo = new Especial(anoN, descripcionN, textoN);
-				} else cout << "Desconocido" << endl;
-				cout << "ID de la bruja: " << endl;
+				} else cout << "Desconocido";
+				cout << "ID de la bruja: ";
 				cin >> IdBruja;
 				info.registrarHechizo(IdBruja, nuevo, error);
 				if (error.HayError())
@@ -102,9 +105,9 @@ int main() {
 			case 7: {
 				Menu::menuReq7();
 				int numHechizo; string idBruja;
-				cout << "ID de la bruja: " << endl;
+				cout << "ID de la bruja: ";
 				cin >> idBruja;
-				cout << "Numero de hechizo: " << endl;
+				cout << "Numero de hechizo: ";
 				cin >> numHechizo;
 				info.listarHechizo(idBruja, numHechizo, error);
 				if (error.HayError())
@@ -114,9 +117,9 @@ int main() {
 			case 8: {
 				Menu::menuReq8();
 				int anio; string idBruja;
-				cout << "ID de la bruja: " << endl;
+				cout << "ID de la bruja: ";
 				cin >> idBruja;
-				cout << "Anio: " << endl;
+				cout << "Anio: ";
 				cin >> anio;
 				info.hechizosEspecialesAno(idBruja, anio, error);
 				if (error.HayError())

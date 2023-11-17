@@ -4,6 +4,8 @@
 #include "Bruja.h"
 #include "Suprema.h"
 
+using namespace std;
+
 class Comun: public Bruja {
 	private:
 		// Atributes
@@ -14,7 +16,7 @@ class Comun: public Bruja {
 	public:
 		// Constructor / Destructor
 		Comun();
-		Comun(string, bool, string);
+		Comun(string, bool, string, string);
 		~Comun();
 
 		// Getter / Setter

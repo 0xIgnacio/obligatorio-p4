@@ -7,7 +7,7 @@ Comun::Comun(): Bruja(), regionOrigen() {
 	this->vuelaEscoba = false;
 }
 
-Comun::Comun(string regionOrigen, bool vuelaEscoba, string nombre): Bruja(nombre), regionOrigen(regionOrigen) {
+Comun::Comun(string regionOrigen, bool vuelaEscoba, string identificador, string nombre): Bruja(identificador, nombre), regionOrigen(regionOrigen) {
 	this->vuelaEscoba = vuelaEscoba;
 }
 
@@ -39,8 +39,9 @@ void Comun::setSuprema(Suprema * sup) {
 // Methods
 void Comun::toStringDetallado() {
 	this->Bruja::toStringDetallado();
-	std::cout << "\nRegion de origen: " << this->getRegionOrigen();
-	std::cout << "\nVuela en escoba: " << this->getVuelaEscoba();
-	std::cout << "\nSuperior: ";
+	cout << "\nRegion de origen: " << this->getRegionOrigen();
+	cout << "\nVuela en escoba: " << this->getVuelaEscoba();
+	cout << "\nSuperior: ";
 	this->super->toStringDetallado();
+	cout << endl;
 }

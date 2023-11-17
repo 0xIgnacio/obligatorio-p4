@@ -7,7 +7,7 @@ Suprema::Suprema():Bruja(),fechaNac() {
 	this->cantPoderes = 0;
 }
 
-Suprema::Suprema(Fecha fechaNac, int cantPoderes, string nombre):Bruja(nombre), fechaNac(fechaNac) {
+Suprema::Suprema(Fecha fechaNac, int cantPoderes, string identificador, string nombre):Bruja(identificador, nombre), fechaNac(fechaNac) {
 	this->cantPoderes = cantPoderes;
 }
 
@@ -38,5 +38,5 @@ void Suprema::toStringDetallado() {
 	this->Bruja::toStringDetallado();
 	std::cout << "\nFecha de nacimiento: ";
 	this->getFechaNac().toString();
-	std::cout << "\nCantidad de poderes: " << this->getCantPoderes();
+	std::cout << "\nCantidad de poderes: " << this->getCantPoderes() << endl;
 }

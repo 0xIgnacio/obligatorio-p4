@@ -5,22 +5,22 @@
 
 class Iterador {
 private:
-	struct Nodo {
-		Bruja * info;
-		Nodo * sig;
-	}; 																					// LPPF
-	Nodo * p;                                		// Primer nodo
-	Nodo * u;                                		// Ultimo nodo
-	Nodo * a;                                		// Nodo actual
+  struct Nodo {
+    Bruja *info;
+    Nodo *sig;
+  };       // LPPF
+  Nodo *p; // Primer nodo
+  Nodo *u; // Ultimo nodo
+  Nodo *a; // Nodo actual
 
 public:
-	// Constructor
-	Iterador();
+  // Constructor
+  Iterador();
+  ~Iterador();
 
-	// Primitivas
-	void Insertar(Bruja *);                  		// La insercion siempre al final
-	void Listar();
+  // Primitivas
+  void Insertar(Bruja *); // La insercion siempre al final
+  void Listar();
 };
 
-
-#endif //UNTITLED1_ITERADOR_H
+#endif // UNTITLED1_ITERADOR_H

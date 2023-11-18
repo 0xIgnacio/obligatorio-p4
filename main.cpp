@@ -10,7 +10,6 @@ int main() {
 	Fachada info;
 	Error error;
 	int opcion;
-
 	do {
 		Menu::menuPrincipal();
 		cin >> opcion;
@@ -83,7 +82,7 @@ int main() {
 				int opcion0;
 				cin >> opcion0;
 				string textoN, IdBruja;
-				cout << "Ingrese nombre:";
+				cout << "Ingrese nombre: ";
 				cin >> textoN;
 				if (opcion0 == 1) {
 					nuevo = new Hechizo(textoN);
@@ -91,7 +90,7 @@ int main() {
 					int anoN; string descripcionN;
 					cout << "Ingrese año en el que se manifesto: ";
 					cin >> anoN;
-					cout << "Descripcion:";
+					cout << "Descripcion: ";
 					cin >> descripcionN;
 					nuevo = new Especial(anoN, descripcionN, textoN);
 				} else cout << "Desconocido";
@@ -121,7 +120,7 @@ int main() {
 				cin >> idBruja;
 				cout << "Anio: ";
 				cin >> anio;
-				info.hechizosEspecialesAno(idBruja, anio, error);
+				cout << "Cantidad de hechizos: " << info.hechizosEspecialesAno(idBruja, anio, error) << endl;
 				if (error.HayError())
 					error.mostrarError();
 			} // Cantidad de hechizos en X anio

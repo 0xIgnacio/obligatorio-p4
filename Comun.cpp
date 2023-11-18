@@ -29,7 +29,7 @@ string Comun::getTipo() {
 int Comun::getPuntosPoder() {
 	return this->cantHechizosComunes() +
 		2 * this->cantHechizosEspeciales() +
-		(this->getRegionOrigen() == "Salem" ? 1 : 0);
+		(this->getRegionOrigen() == "Salem" || "SALEM" || "salem" ? 1 : 0);
 }
 
 void Comun::setSuprema(Suprema * sup) {

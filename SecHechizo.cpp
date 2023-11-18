@@ -18,7 +18,7 @@ int SecHechizo::getTope() {
 }
 
 Hechizo * SecHechizo::getHechizo(int id) {
-	return this->hechizos[id];
+	return this->hechizos[id-1];
 }
 
 // Primitivas
